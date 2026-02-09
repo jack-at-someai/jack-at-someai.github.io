@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>SomeAI Research Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -61,13 +61,19 @@
       font-size: 10px;
       padding: 2px 8px;
       border-radius: 4px;
-      background: rgba(99,102,241,0.15);
-      color: #818cf8;
       margin-top: 4px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       font-weight: 500;
     }
+    .tag-research  { background: rgba(16,185,129,0.15); color: #34d399; }
+    .tag-game      { background: rgba(251,146,60,0.15); color: #fb923c; }
+    .tag-people    { background: rgba(168,85,247,0.15); color: #c084fc; }
+    .tag-infra     { background: rgba(99,102,241,0.15); color: #818cf8; }
+    .tag-tool      { background: rgba(56,189,248,0.15); color: #38bdf8; }
+    .tag-sim       { background: rgba(251,191,36,0.15); color: #fbbf24; }
+    .tag-ml        { background: rgba(244,114,182,0.15); color: #f472b6; }
+    .tag-design    { background: rgba(148,163,184,0.15); color: #94a3b8; }
     .abstract {
       max-width: 800px;
       margin: 0 auto 48px;
@@ -92,186 +98,546 @@
     }
     .abstract p:last-child { margin-bottom: 0; }
     .abstract strong { color: #e2e8f0; font-weight: 600; }
-    .abstract .highlight {
-      color: #818cf8;
-      font-weight: 500;
-    }
+    .abstract .highlight { color: #818cf8; font-weight: 500; }
     .divider {
-      max-width: 800px;
-      margin: 0 auto 40px;
+      max-width: 1200px;
+      margin: 0 auto 20px;
       border: none;
       border-top: 1px solid #1e293b;
     }
+    .section {
+      max-width: 1200px;
+      margin: 0 auto 48px;
+    }
+    .section-header {
+      margin-bottom: 8px;
+    }
+    .section-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .section-header .section-count {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 400;
+    }
+    .section-desc {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #64748b;
+      margin-bottom: 20px;
+      max-width: 700px;
+    }
+    .subsection-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 24px 0 12px;
+      padding-left: 4px;
+    }
+    .subsection-label:first-of-type { margin-top: 0; }
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .person-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px;
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+    }
+    .person-card .person-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+    .person-card .person-role {
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .person-card .person-org {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+    .layer-tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .layer-1 { background: rgba(16,185,129,0.15); color: #34d399; }
+    .layer-2 { background: rgba(251,146,60,0.15); color: #fb923c; }
+    .layer-3 { background: rgba(168,85,247,0.15); color: #c084fc; }
   </style>
 </head>
 <body>
-  <h1>Projects</h1>
-  <p class="subtitle">37 interactive web projects</p>
+  <h1>SomeAI Research Lab</h1>
+  <p class="subtitle">Infrastructure for observable reality</p>
 
   <div class="abstract">
     <h2>Abstract</h2>
     <p>
-      These projects exist to calibrate the best <strong>substrate</strong> to facilitate an artificially intelligent operating system. Each module — whether a game, simulation, visualization, or tool — stress-tests a different facet of the problem space: real-time rendering, graph traversal, state management, algorithmic complexity, human interaction patterns, and domain modeling. They are not portfolio pieces. They are <strong>research instruments</strong>.
+      This is the working surface of a research lab designed to build <span class="highlight">Charlotte</span> &mdash; a graph-native infrastructure where everything is encoded as five primitives (<strong>Node, Edge, Metric, Signal, Protocol</strong>) and time is the primary axis of truth. Charlotte observes reality as it unfolds: identities emit signals on measurable dimensions, relationships form edges, and protocols forecast what should happen next. One substrate. Every vertical. Observable reality as a service.
     </p>
     <p>
-      The ultimate target is <span class="highlight">Charlotte</span> — a graph-native knowledge graph infrastructure where everything is encoded as five primitives (<strong>Node, Metric, Signal, Edge, Protocol</strong>) and time is the primary axis of truth. Charlotte observes reality as it unfolds: identities emit signals on measurable dimensions, relationships form edges, and protocols forecast what should happen next. No schemas, no migrations, no architectural rewrites between domains.
-    </p>
-    <p>
-      The work here accelerates the research and implementation leading to <strong>Draft 1 of Charlotte's knowledge graph infrastructure</strong> — and ultimately our first production version that we plan to iterate into a competitor to <strong>Neo4j, Amazon Neptune, Power BI</strong>, and the rest of the fragmented data tooling landscape. The thesis is simple: nobody offers the full pipeline end-to-end. Charlotte will be the first system that handles <strong>data ingestion to tooling deployment in real time</strong>, for any client, in any domain, without rewiring the architecture. One substrate. Every vertical. Observable reality as a service.
+      The lab is organized in three layers. <strong>Layer 1</strong> is the research hull &mdash; scientific disciplines that define what the lab studies and form the convex hull of Charlotte's intellectual foundation. <strong>Layer 2</strong> is adversarial games &mdash; interactive complexity ladders that stress-test optimization, foresight distance, and state management. <strong>Layer 3</strong> is the people web &mdash; advisors, mentors, engineers, and the competitive landscape that guides the lab's evolution.
     </p>
   </div>
 
   <hr class="divider">
 
-  <div class="grid">
-    <a class="card" href="https://jack-at-someai.github.io/core/2048/">
-      <span class="icon">🔢</span>
-      <div class="card-text"><h2>2048</h2><p>Sliding tile puzzle game</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/aseprite/">
-      <span class="icon">🎨</span>
-      <div class="card-text"><h2>Aseprite</h2><p>Pixel art sprite editor</p><span class="tag">Tool</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/block-dude/">
-      <span class="icon">🧱</span>
-      <div class="card-text"><h2>Block Dude</h2><p>Block-pushing puzzle platformer</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/chaostheory/">
-      <span class="icon">🌀</span>
-      <div class="card-text"><h2>Chaos Theory</h2><p>Strange attractors & dynamical systems</p><span class="tag">Simulation</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/chess/">
-      <span class="icon">♟️</span>
-      <div class="card-text"><h2>Chess</h2><p>Chess game with AI opponent</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/cnn/">
-      <span class="icon">🧠</span>
-      <div class="card-text"><h2>CNN</h2><p>Convolutional neural network visualizer</p><span class="tag">ML</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/cognitive-science/">
-      <span class="icon">🧠</span>
-      <div class="card-text"><h2>Cognitive Science</h2><p>Predictive coding, Bayesian brain & resonance</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/component-showcase/">
-      <span class="icon">🎯</span>
-      <div class="card-text"><h2>Component Showcase</h2><p>Material 3 components + Lisp FOL</p><span class="tag">Design</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/fourier/">
-      <span class="icon">〰️</span>
-      <div class="card-text"><h2>Fourier</h2><p>Fourier transform visualization</p><span class="tag">Math</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/formal-logic/">
-      <span class="icon">∀</span>
-      <div class="card-text"><h2>Formal Logic</h2><p>Propositional logic, FOL, lambda calculus & Lisp</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/go/">
-      <span class="icon">⚫</span>
-      <div class="card-text"><h2>Go</h2><p>The ancient board game of Go</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/graph-theory/">
-      <span class="icon">⊛</span>
-      <div class="card-text"><h2>Graph Theory</h2><p>Knowledge graphs, ontologies & graph databases</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/hexgrid/">
-      <span class="icon">⬡</span>
-      <div class="card-text"><h2>Hex Grid</h2><p>Hexagonal grid system</p><span class="tag">Tool</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/hoshin-kanri-toolkit/">
-      <span class="icon">📊</span>
-      <div class="card-text"><h2>Hoshin Kanri Toolkit</h2><p>Strategic planning X-matrix tool</p><span class="tag">Business</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/livestock-science/">
-      <span class="icon">🐄</span>
-      <div class="card-text"><h2>Livestock Science</h2><p>Genetics, breeding, reproduction & show industry</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/minesweeper/">
-      <span class="icon">💣</span>
-      <div class="card-text"><h2>Minesweeper</h2><p>Classic mine-sweeping puzzle</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/neumorphism/">
-      <span class="icon">🫧</span>
-      <div class="card-text"><h2>Neumorphism</h2><p>Soft UI components + atomic design</p><span class="tag">Design</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/neuralplayground/">
-      <span class="icon">🔮</span>
-      <div class="card-text"><h2>Neural Playground</h2><p>Interactive neural network playground</p><span class="tag">ML</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/neuroscience/">
-      <span class="icon">🧬</span>
-      <div class="card-text"><h2>Neuroscience</h2><p>Neural geometry reference hub</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/pig-breeder/">
-      <span class="icon">🐷</span>
-      <div class="card-text"><h2>Pig Breeder</h2><p>Breeding genetics simulator</p><span class="tag">Simulation</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/pong/">
-      <span class="icon">🏓</span>
-      <div class="card-text"><h2>Pong</h2><p>Classic paddle ball game</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/sacred-geometry/">
-      <span class="icon">✡️</span>
-      <div class="card-text"><h2>Sacred Geometry</h2><p>Geometric pattern generator</p><span class="tag">Math</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/show-animal-tree/">
-      <span class="icon">🌳</span>
-      <div class="card-text"><h2>Show Animal Tree</h2><p>PoE2-style skill tree for livestock</p><span class="tag">Tool</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/signal-processing/">
-      <span class="icon">〰️</span>
-      <div class="card-text"><h2>Signal Processing</h2><p>Time series, frequency domain & drift detection</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/snake/">
-      <span class="icon">🐍</span>
-      <div class="card-text"><h2>Snake</h2><p>Classic snake game</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/solitaire-glass/">
-      <span class="icon">🃏</span>
-      <div class="card-text"><h2>Solitaire Glass</h2><p>Glassmorphism solitaire card game</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/spatial-computing/">
-      <span class="icon">🌍</span>
-      <div class="card-text"><h2>Spatial Computing</h2><p>GIS, spatial databases & geospatial algorithms</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/substrate/">
-      <span class="icon">&#x1F578;</span>
-      <div class="card-text"><h2>Substrate</h2><p>Charlotte knowledge graph explorer</p><span class="tag">Infrastructure</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/sudoku/">
-      <span class="icon">🔲</span>
-      <div class="card-text"><h2>Sudoku</h2><p>Number placement puzzle</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/swarm/">
-      <span class="icon">🐝</span>
-      <div class="card-text"><h2>Swarm</h2><p>Swarm intelligence simulation</p><span class="tag">Simulation</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/swarm-intelligence/">
-      <span class="icon">🐝</span>
-      <div class="card-text"><h2>Swarm Intelligence</h2><p>Flocking, emergence & multi-agent systems</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/systems-architecture/">
-      <span class="icon">🏗️</span>
-      <div class="card-text"><h2>Systems Architecture</h2><p>Distributed systems, DDD & event-driven design</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/temporal-databases/">
-      <span class="icon">⏱️</span>
-      <div class="card-text"><h2>Temporal Databases</h2><p>Event sourcing, bitemporal modeling & CQRS</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/tetris/">
-      <span class="icon">🟦</span>
-      <div class="card-text"><h2>Tetris</h2><p>Falling block puzzle game</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/tic-tac-toe/">
-      <span class="icon">❌</span>
-      <div class="card-text"><h2>Tic-Tac-Toe</h2><p>Classic X and O game</p><span class="tag">Game</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/topology/">
-      <span class="icon">◎</span>
-      <div class="card-text"><h2>Topology</h2><p>Algebraic topology, TDA & higher dimensions</p><span class="tag">Reference</span></div>
-    </a>
-    <a class="card" href="https://jack-at-someai.github.io/core/tsp-algorithm-visualizer/">
-      <span class="icon">🗺️</span>
-      <div class="card-text"><h2>TSP Visualizer</h2><p>Traveling salesman algorithm visualizer</p><span class="tag">Algorithm</span></div>
-    </a>
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 1: RESEARCH HULL                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-header">
+      <span class="layer-tag layer-1">Layer 1</span>
+      <h2>Research Hull <span class="section-count">&mdash; 23 hubs</span></h2>
+    </div>
+    <p class="section-desc">
+      The scientific disciplines forming the convex hull of the research lab. Each hub is a curated reference corpus &mdash; subject to change as the lab evolves. Together they define the intellectual boundary within which Charlotte operates.
+    </p>
+
+    <p class="subsection-label">Foundations &mdash; Math, Logic, Computation</p>
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/formal-logic/">
+        <span class="icon">&forall;</span>
+        <div class="card-text"><h2>Formal Logic</h2><p>Propositional logic, FOL, lambda calculus & Lisp</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/graph-theory/">
+        <span class="icon">&CircleDot;</span>
+        <div class="card-text"><h2>Graph Theory</h2><p>Knowledge graphs, ontologies & graph databases</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/topology/">
+        <span class="icon">&#9678;</span>
+        <div class="card-text"><h2>Topology</h2><p>Algebraic topology, TDA & higher dimensions</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/systems-architecture/">
+        <span class="icon">&#x1F3D7;&#xFE0F;</span>
+        <div class="card-text"><h2>Systems Architecture</h2><p>Distributed systems, DDD & event-driven design</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/temporal-databases/">
+        <span class="icon">&#x23F1;&#xFE0F;</span>
+        <div class="card-text"><h2>Temporal Databases</h2><p>Event sourcing, bitemporal modeling & CQRS</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/spatial-computing/">
+        <span class="icon">&#x1F30D;</span>
+        <div class="card-text"><h2>Spatial Computing</h2><p>GIS, spatial databases & geospatial algorithms</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/signal-processing/">
+        <span class="icon">&#x3030;&#xFE0F;</span>
+        <div class="card-text"><h2>Signal Processing</h2><p>Time series, frequency domain & drift detection</p><span class="tag tag-research">Reference</span></div>
+      </a>
+    </div>
+
+    <p class="subsection-label">Intelligence &mdash; Neural, Cognitive, Swarm</p>
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/cognitive-science/">
+        <span class="icon">&#x1F9E0;</span>
+        <div class="card-text"><h2>Cognitive Science</h2><p>Predictive coding, Bayesian brain & resonance</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/neuroscience/">
+        <span class="icon">&#x1F9EC;</span>
+        <div class="card-text"><h2>Neuroscience</h2><p>Neural geometry reference hub</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/swarm-intelligence/">
+        <span class="icon">&#x1F41D;</span>
+        <div class="card-text"><h2>Swarm Intelligence</h2><p>Flocking, emergence & multi-agent systems</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/nature-inspired-algorithms/">
+        <span class="icon">&#x1F332;</span>
+        <div class="card-text"><h2>Nature-Inspired Algorithms</h2><p>Evolutionary computation, swarms & optimization</p><span class="tag tag-research">Reference</span></div>
+      </a>
+    </div>
+
+    <p class="subsection-label">Biomimicry &mdash; Learning from Biology</p>
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/biomimicry/">
+        <span class="icon">&#x1F33F;</span>
+        <div class="card-text"><h2>Biomimicry</h2><p>Design principles from biological systems</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/entomology/">
+        <span class="icon">&#x1FAB2;</span>
+        <div class="card-text"><h2>Entomology</h2><p>Insect science & containerized simulation</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/biomimetic-materials/">
+        <span class="icon">&#x1F48E;</span>
+        <div class="card-text"><h2>Biomimetic Materials</h2><p>Self-healing, shape memory & hierarchical composites</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/structural-biomimetics/">
+        <span class="icon">&#x1F41A;</span>
+        <div class="card-text"><h2>Structural Biomimetics</h2><p>Silk, nacre, bone & natural composites</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/bio-architecture/">
+        <span class="icon">&#x1F3DB;&#xFE0F;</span>
+        <div class="card-text"><h2>Bio-Architecture</h2><p>Termite ventilation, shell structures & tensegrity</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/bio-surfaces/">
+        <span class="icon">&#x1F4A7;</span>
+        <div class="card-text"><h2>Bio-Surfaces</h2><p>Superhydrophobicity, gecko adhesion & anti-fouling</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/bio-optics-photonics/">
+        <span class="icon">&#x1F308;</span>
+        <div class="card-text"><h2>Bio-Optics</h2><p>Structural color, bioluminescence & camouflage</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/bio-locomotion/">
+        <span class="icon">&#x1F99E;</span>
+        <div class="card-text"><h2>Bio-Locomotion</h2><p>Flight, swimming, terrestrial & collective motion</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/bio-inspired-robotics/">
+        <span class="icon">&#x1F916;</span>
+        <div class="card-text"><h2>Bio-Inspired Robotics</h2><p>Soft robotics, legged robots & swarm systems</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/ecological-systems-design/">
+        <span class="icon">&#x267B;&#xFE0F;</span>
+        <div class="card-text"><h2>Ecological Systems Design</h2><p>Circular economy, industrial ecology & regenerative design</p><span class="tag tag-research">Reference</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/spider-silk/">
+        <span class="icon">&#x1F577;&#xFE0F;</span>
+        <div class="card-text"><h2>Spider Silk</h2><p>Silk biology, husbandry & biomaterials</p><span class="tag tag-research">Reference</span></div>
+      </a>
+    </div>
+
+    <p class="subsection-label">Domain &mdash; Livestock, Agriculture</p>
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/livestock-science/">
+        <span class="icon">&#x1F404;</span>
+        <div class="card-text"><h2>Livestock Science</h2><p>Genetics, breeding, reproduction & show industry</p><span class="tag tag-research">Reference</span></div>
+      </a>
+    </div>
   </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 2: ADVERSARIAL GAMES                                 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-header">
+      <span class="layer-tag layer-2">Layer 2</span>
+      <h2>Adversarial Games <span class="section-count">&mdash; 22 modules</span></h2>
+    </div>
+    <p class="section-desc">
+      Complexity ladders for stress-testing optimization. Each game is an adversarial test bed with a measurable foresight distance &mdash; the number of moves ahead the system must reason to play well. Walking the foresight distance from 1-ply (Pong) to unbounded (Go) ensures Charlotte's optimization pipeline scales.
+    </p>
+
+    <p class="subsection-label">Games &mdash; Foresight Distance Ladder</p>
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/tic-tac-toe/">
+        <span class="icon">&#x274C;</span>
+        <div class="card-text"><h2>Tic-Tac-Toe</h2><p>Complete game tree &mdash; 1-ply solved</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/pong/">
+        <span class="icon">&#x1F3D3;</span>
+        <div class="card-text"><h2>Pong</h2><p>Real-time reflexive control &mdash; 1-ply</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/snake/">
+        <span class="icon">&#x1F40D;</span>
+        <div class="card-text"><h2>Snake</h2><p>Path planning under growing constraints</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/2048/">
+        <span class="icon">&#x1F522;</span>
+        <div class="card-text"><h2>2048</h2><p>Stochastic tile merging &mdash; 3-ply</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/minesweeper/">
+        <span class="icon">&#x1F4A3;</span>
+        <div class="card-text"><h2>Minesweeper</h2><p>Constraint propagation under uncertainty</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/sudoku/">
+        <span class="icon">&#x1F532;</span>
+        <div class="card-text"><h2>Sudoku</h2><p>Arc consistency & backtracking search</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/block-dude/">
+        <span class="icon">&#x1F9F1;</span>
+        <div class="card-text"><h2>Block Dude</h2><p>Block-pushing spatial reasoning</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/solitaire-glass/">
+        <span class="icon">&#x1F0CF;</span>
+        <div class="card-text"><h2>Solitaire Glass</h2><p>Partial information sequential decisions</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/tetris/">
+        <span class="icon">&#x1F7E6;</span>
+        <div class="card-text"><h2>Tetris</h2><p>Real-time packing under time pressure</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/maplestory/">
+        <span class="icon">&#x1F41F;</span>
+        <div class="card-text"><h2>Fish Market Bazaar</h2><p>Multi-agent economic negotiation</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/against-the-storm/">
+        <span class="icon">&#x26C8;&#xFE0F;</span>
+        <div class="card-text"><h2>Against the Storm</h2><p>Multi-species settlement management</p><span class="tag tag-game">Companion</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/chess/">
+        <span class="icon">&#x265F;&#xFE0F;</span>
+        <div class="card-text"><h2>Chess</h2><p>Minimax + alpha-beta &mdash; 6-12 ply</p><span class="tag tag-game">Game</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/go/">
+        <span class="icon">&#x26AB;</span>
+        <div class="card-text"><h2>Go</h2><p>MCTS on 361-point board &mdash; unbounded</p><span class="tag tag-game">Game</span></div>
+      </a>
+    </div>
+
+    <p class="subsection-label">Simulations &mdash; Emergent Complexity</p>
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/chaostheory/">
+        <span class="icon">&#x1F300;</span>
+        <div class="card-text"><h2>Chaos Theory</h2><p>Strange attractors & dynamical systems</p><span class="tag tag-sim">Simulation</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/swarm/">
+        <span class="icon">&#x1F41D;</span>
+        <div class="card-text"><h2>Swarm</h2><p>Flocking, separation, alignment & cohesion</p><span class="tag tag-sim">Simulation</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/pig-breeder/">
+        <span class="icon">&#x1F437;</span>
+        <div class="card-text"><h2>PorkPal</h2><p>Breeding genetics & trait propagation</p><span class="tag tag-sim">Simulation</span></div>
+      </a>
+    </div>
+
+    <p class="subsection-label">ML & Visualization &mdash; Internals Made Visible</p>
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/cnn/">
+        <span class="icon">&#x1F9E0;</span>
+        <div class="card-text"><h2>CNN</h2><p>Convolutional neural network visualizer</p><span class="tag tag-ml">ML</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/neuralplayground/">
+        <span class="icon">&#x1F52E;</span>
+        <div class="card-text"><h2>Neural Playground</h2><p>Interactive neural network training</p><span class="tag tag-ml">ML</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/fourier/">
+        <span class="icon">&#x3030;&#xFE0F;</span>
+        <div class="card-text"><h2>Fourier</h2><p>Fourier transform decomposition</p><span class="tag tag-ml">Math</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/sacred-geometry/">
+        <span class="icon">&#x2721;&#xFE0F;</span>
+        <div class="card-text"><h2>Sacred Geometry</h2><p>Geometric pattern generator</p><span class="tag tag-ml">Math</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/tsp-algorithm-visualizer/">
+        <span class="icon">&#x1F5FA;&#xFE0F;</span>
+        <div class="card-text"><h2>TSP Visualizer</h2><p>Traveling salesman optimization</p><span class="tag tag-ml">Algorithm</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/isometric/">
+        <span class="icon">&#x25C7;</span>
+        <div class="card-text"><h2>Isometric</h2><p>Isometric grid builder & map editor</p><span class="tag tag-tool">Tool</span></div>
+      </a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 3: PEOPLE WEB                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-header">
+      <span class="layer-tag layer-3">Layer 3</span>
+      <h2>People Web <span class="section-count">&mdash; advisors, engineers, landscape</span></h2>
+    </div>
+    <p class="section-desc">
+      The tunnel spider's masterful list. Advisors who shaped the intellectual foundation, Serengeti directors who guide each lab section, engineers on standby for when the lab is funded, and the competitive landscape Charlotte must navigate.
+    </p>
+
+    <p class="subsection-label">Advisory Board &mdash; Intellectual Lineage</p>
+    <div class="people-grid">
+      <div class="person-card">
+        <span class="tag tag-people">Advisor</span>
+        <span class="person-name">Kenneth D. Forbus</span>
+        <span class="person-role">Qualitative reasoning, analogical learning, structure-mapping theory</span>
+        <span class="person-org">Northwestern &mdash; QRG Lab</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-people">Advisor</span>
+        <span class="person-name">Kristian J. Hammond</span>
+        <span class="person-role">Case-based reasoning, memory before abstraction, NLG</span>
+        <span class="person-org">Northwestern &mdash; MSAI Founding Director</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-people">Advisor</span>
+        <span class="person-name">David A. Ferrucci</span>
+        <span class="person-role">Hypothesis-evidence architecture, adversarial robustness, explanation</span>
+        <span class="person-org">Elemental Cognition &mdash; Founder (ex-IBM Watson PI)</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-people">Advisor</span>
+        <span class="person-name">Louis B. Rosenberg</span>
+        <span class="person-role">Swarm intelligence, conviction topology, collective human intelligence</span>
+        <span class="person-org">Unanimous AI &mdash; Founder & CEO</span>
+      </div>
+    </div>
+
+    <p class="subsection-label">Founders &mdash; Generational Architecture</p>
+    <div class="people-grid">
+      <div class="person-card">
+        <span class="tag tag-people">G0 &mdash; Foundation</span>
+        <span class="person-name">Donald J. Almquist</span>
+        <span class="person-role">VP General Motors, GM Delco Electronics. Four-generation harmonic resonance origin.</span>
+        <span class="person-org">General Motors &mdash; Kokomo, Indiana</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-people">G1 &mdash; Operations</span>
+        <span class="person-name">Jim Richard</span>
+        <span class="person-role">PE acquisitions, swarm coordination across 16+ brands, 80K employees</span>
+        <span class="person-org">Richard Enterprises &mdash; Chairman / ISG CEO</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-people">G2 &mdash; Engineering</span>
+        <span class="person-name">Joseph Richard</span>
+        <span class="person-role">Automotive engineering, operational discipline, startup scaling</span>
+        <span class="person-org">SomeAI &mdash; Co-Founder / Richard Enterprises</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-people">G2 &mdash; Architecture</span>
+        <span class="person-name">Jack Richard</span>
+        <span class="person-role">Knowledge graphs, swarm intelligence, Charlotte substrate architect</span>
+        <span class="person-org">SomeAI &mdash; Founder / Charlotte PI</span>
+      </div>
+    </div>
+
+    <p class="subsection-label">Standing Wave &mdash; The Dead Teach the Living</p>
+    <div class="people-grid">
+      <div class="person-card">
+        <span class="tag tag-people">Resonance</span>
+        <span class="person-name">Dave Genger Jr.</span>
+        <span class="person-role">LFCDS science teacher (1962&ndash;2010). Seeded both Richard trajectories: Jack &rarr; robotics &rarr; AI. Joseph &rarr; insects &rarr; biology.</span>
+        <span class="person-org">Lake Forest Country Day School &mdash; Chair, Science Department</span>
+      </div>
+    </div>
+
+    <p class="subsection-label">Serengeti Lab Sections &mdash; 6 Divisions</p>
+    <div class="people-grid">
+      <div class="person-card">
+        <span class="tag tag-infra">Section</span>
+        <span class="person-name">Serengeti Founders</span>
+        <span class="person-role">12-seat investor council &mdash; strategy, governance, capital allocation</span>
+        <span class="person-org">Codename: The Lions</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-infra">Section</span>
+        <span class="person-name">Serengeti Farms</span>
+        <span class="person-role">Digital app incubator on Charlotte substrate &mdash; 40-60% faster builds</span>
+        <span class="person-org">Codename: The Incubator</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-infra">Section</span>
+        <span class="person-name">Serengeti Prides</span>
+        <span class="person-role">Leadership development for emerging executives (20s&ndash;30s)</span>
+        <span class="person-org">Codename: The Pack</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-infra">Section</span>
+        <span class="person-name">Serengeti Summit</span>
+        <span class="person-role">Annual networking and thought leadership event</span>
+        <span class="person-org">Codename: The Peak</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-infra">Section</span>
+        <span class="person-name">Serengeti Oasis</span>
+        <span class="person-role">Private equity luxury real estate fund</span>
+        <span class="person-org">Codename: The Haven</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-infra">Section</span>
+        <span class="person-name">Serengeti Singularity</span>
+        <span class="person-role">Moonshot R&D &mdash; exponential, irreversible growth</span>
+        <span class="person-org">Codename: The Horizon</span>
+      </div>
+    </div>
+
+    <p class="subsection-label">Competitive Landscape</p>
+    <div class="people-grid">
+      <div class="person-card">
+        <span class="tag tag-game">Incumbent</span>
+        <span class="person-name">Neo4j</span>
+        <span class="person-role">Graph database leader. $2B valuation, 84% Fortune 100. No temporal substrate, no signals.</span>
+        <span class="person-org">$200M+ ARR &mdash; 44% graph market share</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-game">Incumbent</span>
+        <span class="person-name">Amazon Neptune</span>
+        <span class="person-role">Cloud-native graph. AWS lock-in, no temporal substrate, single-writer bottleneck.</span>
+        <span class="person-org">AWS &mdash; ~604 known deployments</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-game">Incumbent</span>
+        <span class="person-name">InfluxDB</span>
+        <span class="person-role">Time-series leader. No entity relationships, no identity model, no graph structure.</span>
+        <span class="person-org">$75M revenue &mdash; 750K open-source instances</span>
+      </div>
+      <div class="person-card">
+        <span class="tag tag-game">Incumbent</span>
+        <span class="person-name">TimescaleDB</span>
+        <span class="person-role">PostgreSQL time-series extension. Relational foundation, schema migration tax.</span>
+        <span class="person-org">$1B valuation &mdash; $18M ARR</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- INFRASTRUCTURE & TOOLS                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Infrastructure & Tools <span class="section-count">&mdash; 7 modules</span></h2>
+    </div>
+    <p class="section-desc">
+      Charlotte's core explorer, design systems, and operational tools that support the lab.
+    </p>
+
+    <div class="grid">
+      <a class="card" href="https://jack-at-someai.github.io/core/substrate/">
+        <span class="icon">&#x1F578;</span>
+        <div class="card-text"><h2>Substrate</h2><p>Charlotte knowledge graph explorer</p><span class="tag tag-infra">Infrastructure</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/sealion/">
+        <span class="icon">&#x1F9AD;</span>
+        <div class="card-text"><h2>Sea Lion</h2><p>Ocean science research companion</p><span class="tag tag-infra">Product</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/hoshin-kanri-toolkit/">
+        <span class="icon">&#x1F4CA;</span>
+        <div class="card-text"><h2>Hoshin Kanri Toolkit</h2><p>Strategic planning X-matrix tool</p><span class="tag tag-tool">Tool</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/hexgrid/">
+        <span class="icon">&#x2B21;</span>
+        <div class="card-text"><h2>Hex Grid</h2><p>Hexagonal grid system</p><span class="tag tag-tool">Tool</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/show-animal-tree/">
+        <span class="icon">&#x1F333;</span>
+        <div class="card-text"><h2>Show Animal Tree</h2><p>PoE2-style skill tree for livestock</p><span class="tag tag-tool">Tool</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/aseprite/">
+        <span class="icon">&#x1F3A8;</span>
+        <div class="card-text"><h2>Aseprite</h2><p>Pixel art sprite editor</p><span class="tag tag-tool">Tool</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/component-showcase/">
+        <span class="icon">&#x1F3AF;</span>
+        <div class="card-text"><h2>Component Showcase</h2><p>Material 3 components + Lisp FOL</p><span class="tag tag-design">Design</span></div>
+      </a>
+      <a class="card" href="https://jack-at-someai.github.io/core/neumorphism/">
+        <span class="icon">&#x1FAE7;</span>
+        <div class="card-text"><h2>Neumorphism</h2><p>Soft UI components + atomic design</p><span class="tag tag-design">Design</span></div>
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>
